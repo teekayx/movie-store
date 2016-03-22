@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie Store</title>
+    </head>
+    <body>
+        <h1>YOUR MOVIE COLLECTION</h1>
+             <ul>
+                {% for movie in movies %}
+                <li>Title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {{ movie.title }}
+                </li>
+                <li>Year:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {{ movie.year }}
+                </li>
+                <li>IMDB:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="http://www.imdb.com/title/{{movie.imdb}}" target='_blank'>{{movie.title}}</a>
+                </li>
+                <br>
+                <br>
+                {% endfor %}
+            </ul>
+    </body>
+</html>        
